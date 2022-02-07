@@ -1,0 +1,17 @@
+{
+  "name": "hl-security-connector",  
+  "config": {  
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",  
+    "database.hostname": "<YOUR_DATABASE_HOSTNAME>",  
+    "database.port": "<YOUR_DATABASE_PORT>",
+    "database.allowPublicKeyRetrieval": "true",
+    "database.user": "<YOUR_DATABASE_USER>",
+    "database.password": "<YOUR_DATABASE_PASSWORD>",
+    "database.server.id": "1",  
+    "database.server.name": "<YOUR_DATABASE_SERVER_NAME>",  
+    "database.include.list": "<YOUR_DATABASE_SCHEMA_LIST>",  
+    "database.history.kafka.bootstrap.servers": "<YOUR_KAFKA_BROKERS_LIST>",  
+    "database.history.kafka.topic": "debezium-schema-changes.<YOUR_DATABASE_SCHEMA_LIST>"  
+  }
+}
